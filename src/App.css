@@ -20,7 +20,11 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: url('https://irecover.ca/wp-content/uploads/2020/03/quit-drinking-and-drugs-400x267.jpeg');
+  max-width: 100vw;
+  max-height: 100vh;
+  background-size: cover;
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
