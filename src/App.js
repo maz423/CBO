@@ -1,4 +1,23 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
+
+
+import  { Component } from 'react';
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+import { Nav } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
+import { NavDropdown } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
+
+
+
+
 
 
 
@@ -30,6 +49,7 @@ function App() {
   const [status,setStatus] = useState('');
   const [getList, setList] = useState([]);
   const [getListCust, setListCust] = useState([]);
+  const [user,setUser] = useState('');
 
   
   useEffect(() => {   {fetch('http://localhost:8000/data').then
@@ -65,14 +85,23 @@ function App() {
     
     <div className="App">
 
+<Router>
+{
+                !token
+                ? <></>
+                :    user == 'admin'
+                ?  <Nav_admin user = {'admin'}/> 
+                : <Nav_admin user = {'staff'}/>   
+               
            
-      
-      
+          }
+                
+
+    
       <header className="App-header">
       
         
-        <Router>
-
+        
         
          
         {/* <Link to="/showPosts">  <button> Display Customer Posts </button> </Link>
@@ -82,27 +111,28 @@ function App() {
 
             {
                 !token
-                ? <Login set = {setToken}/>
+                ? <Login set = {setToken} user = {setUser}/>
                 : 
+              
              
          <Routes>
          
-         <Route exact path='/' element={<Login set = {token}/>} />
-         <Route path="/admin" element={<Nav_admin />} />
-         <Route path="/staff" element={<Nav_staff />} />
+         <Route exact path='/' element={<Login set = {token} user = {setUser}/>} />
+         <Route path="/admin" element={<Display get = {getList} gett = {getListCust} />} />
+         <Route path="/staff" element={<Display_customer get = {getListCust} />} />
          <Route path="/Addstaff" element={ <Add_staff set = {setChange}/> } />
-        <Route path="/Removestaff" element={ <Remove_staff  set = {setChange}  /> } />
-        <Route path="/Updatestaff" element={ <Update_staff set = {setChange} /> } />
-        <Route path="/Displaystaff" element={ <Display get = {getList} /> } />
-        <Route path="/Addcustomer" element={ <Add_customer set = {setChangeCust}/> } />
-        <Route path="/Removecustomer" element={ <Remove_customer set = {setChangeCust} /> } />
-        <Route path="/Updatecustomer" element={ <Update_customer  set = {setChangeCust} /> } />
-        <Route path="/Displaycustomer" element={ <Display_customer get = {getListCust} /> } />
+         <Route path="/Removestaff" element={ <Remove_staff  set = {setChange}  /> } />
+         <Route path="/Updatestaff" element={ <Update_staff set = {setChange} /> } />
+         <Route path="/Displaystaff" element={ <Display get = {getList} /> } />
+         <Route path="/Addcustomer" element={ <Add_customer set = {setChangeCust}/> } />
+         <Route path="/Removecustomer" element={ <Remove_customer set = {setChangeCust} /> } />
+         <Route path="/Updatecustomer" element={ <Update_customer  set = {setChangeCust} /> } />
+         <Route path="/Displaycustomer" element={ <Display_customer get = {getListCust} /> } />
         
        
            </Routes>}
          
-        </Router>
+        
         
 
         {
@@ -111,7 +141,7 @@ function App() {
                 : <></>}
         
       </header>
-      
+      </Router>
       </div>
   );
 }

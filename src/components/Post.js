@@ -1,3 +1,4 @@
+import './Post.css'
 import React from 'react';
 
 export const Post = (props) => {
@@ -5,7 +6,7 @@ export const Post = (props) => {
 return (
 
 <div>
-    <h5> ID: {props.ID} , &nbsp; Name: {props.fname}, &nbsp; {props.lname}, &nbsp; Address: {props.address}, &nbsp; Role: {props.role}, &nbsp; Registration Date: {props.date}. </h5> 
+    <h5 className='post'> ID: {props.ID} , &nbsp; Name: {props.fname}, &nbsp; {props.lname}, &nbsp; Address: {props.address}, &nbsp; Role: {props.role}, &nbsp; Registration Date: {props.date}. </h5> 
 
 
 

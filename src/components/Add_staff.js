@@ -9,6 +9,8 @@ import {Display} from "./Display"
 
 import {Remove_staff} from "./Remove_staff"
 import {Post} from "./Post"
+import './Display.css'
+
 
 
 import React from 'react';
@@ -49,9 +51,9 @@ export const Add_staff = (props) => {
 return (
 
 <div>
-    <Nav_admin/>
+    
 
-    <h1> Please fill the form to register a Staff member  </h1>
+    <h1 className='head'> Please fill the form to register a Staff member : </h1>
 
    
    

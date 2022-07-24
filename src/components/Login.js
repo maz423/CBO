@@ -34,13 +34,13 @@ const handleSubmitClick = (e) => {
       if(data.role === 'admin'){
        props.set(true);
        navigate('/admin');
-       
+        props.user('admin');
         alert("Welcome admin");
       }
       
       else if(data.role === 'staff'){
         props.set(true);
-        
+        props.user('staff');
         navigate('/staff');
         alert('Welcome Staff')}
 

@@ -31,8 +31,8 @@ export const Remove_customer = (props) => {
 return (
 
 <div>
-    <Nav_staff/>
-    <h1> Enter ID to remove Customer </h1>
+    
+    <h1 className='head' > Enter ID to remove Customer : </h1>
     
     
 

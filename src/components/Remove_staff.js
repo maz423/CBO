@@ -4,6 +4,8 @@ import {useState} from 'react';
 
 import React from 'react';
 import {Nav_admin} from './Nav_admin';
+import './Display.css'
+
 
 
 export const Remove_staff = (props) => {
@@ -33,8 +35,8 @@ export const Remove_staff = (props) => {
 return (
 
 <div>
-    <Nav_admin/>
-    <h1> Enter ID to remove Staff Member </h1>
+    
+    <h1 className='head'> Enter ID to remove Staff Member : </h1>
     
     
 

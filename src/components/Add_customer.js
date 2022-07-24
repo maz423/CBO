@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
+import './Display.css'
 
 import {Nav_staff} from './Nav_staff';
 
@@ -48,8 +49,8 @@ return (
                //  : <Nav_admin/>
 }
 
-<Nav_staff/>
-    <h1> Please fill the form to register a Staff member  </h1>
+
+    <h1 className='head' > Please fill the form to register a Customer :  </h1>
 
    
    

@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import {Nav_staff} from './Nav_staff';
+import './Display.css'
 
 
 export const Update_customer = (props) => {
@@ -118,12 +119,12 @@ return (
 
 <div>
 
-    <Nav_staff/>
+    
 
 
-<p>
-    Update customer information:
-  </p><br></br>
+<h1 className='head'>
+    Update customer information :
+  </h1><br></br>
 
   <form onSubmit={handleSubmitfname}>
     <label for="ID">Customer ID:</label> &nbsp;&nbsp;
