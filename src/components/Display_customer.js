@@ -8,11 +8,11 @@ export const Display_customer = (props) => {
 
 return (
 
-<div>
+<div className='Display-div'>
 
 
 <section>
-<h1 className='head'>   Customers found: </h1>
+<h1 className='head'>   Customers : </h1>
  {props.get.map(post => (
    <Post  ID={post.ID} fname={post.First_Name} lname = {post.Last_Name} address={post.Address}  date={post.Date}/>
 ))}

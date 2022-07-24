@@ -123,11 +123,11 @@ function App() {
          <Route path="/Addstaff" element={ <Add_staff set = {setChange}/> } />
          <Route path="/Removestaff" element={ <Remove_staff  set = {setChange}  /> } />
          <Route path="/Updatestaff" element={ <Update_staff set = {setChange} /> } />
-         <Route path="/Displaystaff" element={ <Display get = {getList} /> } />
+         <Route path="/Displaystaff" element={ <Display get = {getList} gett = {getListCust} bool = {0} /> } />
          <Route path="/Addcustomer" element={ <Add_customer set = {setChangeCust}/> } />
          <Route path="/Removecustomer" element={ <Remove_customer set = {setChangeCust} /> } />
          <Route path="/Updatecustomer" element={ <Update_customer  set = {setChangeCust} /> } />
-         <Route path="/Displaycustomer" element={ <Display_customer get = {getListCust} /> } />
+         <Route path="/Displaycustomer" element={ <Display_customer get = {getListCust}  /> } />
         
        
            </Routes>}

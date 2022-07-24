@@ -17,7 +17,7 @@ return (
 <Row>
 <Col> 
 <div className='Display-div'>  
-<h1 className='head'>   Staff members found: </h1>
+<h1 className='head'>   Staff members : </h1>
  {props.get.map(post => (
    <Post   ID={post.ID} fname={post.First_Name} lname = {post.Last_Name} address={post.Address} role={post.role} date={post.Date}/>
 ))}
@@ -26,15 +26,20 @@ return (
 
 
 
+{props.bool != 0
+? (<Col>
+      <div className='Display-div'>
+      <h1 className='head'>   Customers : </h1>
+       {props.gett.map(post => (
+         <Post  ID={post.ID} fname={post.First_Name} lname = {post.Last_Name} address={post.Address}  date={post.Date}/>
+      ))}
+      </div>
+      </Col>)
 
-<Col>
-<div className='Display-div'>
-<h1 className='head'>   Customers found: </h1>
- {props.gett.map(post => (
-   <Post  ID={post.ID} fname={post.First_Name} lname = {post.Last_Name} address={post.Address}  date={post.Date}/>
-))}
-</div>
-</Col>
+:<></>
+
+}
+
 </Row>
 
 </Container>

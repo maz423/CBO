@@ -92,6 +92,25 @@ return (
                        Update Customer
                       </NavDropdown.Item>
                       </NavDropdown>)
+          case 'Display':
+            return (<NavDropdown
+              id="nav-dropdown-dark-example"
+              title="Display"
+              menuVariant="dark"
+            >
+
+                 
+                  <NavDropdown.Item as={Link} to="/Displaystaff">
+                 Display Staff
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/Displaycustomer">
+                 Display Customer
+                </NavDropdown.Item>
+
+                </NavDropdown>
+                
+                )
+          
           
           default:
             return null

@@ -43,7 +43,7 @@ return (
         { props.user == 'admin'
 
           ? <Nav className="me-auto" id='navbar' >
-       
+          <Nav.Link as={Link} to='/admin'>Home</Nav.Link>
           <div whileHover={{y:-5,scale : 1.3}}>
           
           <Dropdowns name= {"Add"} class={"admin"}/>
@@ -64,7 +64,7 @@ return (
 
           : 
           <Nav className="me-auto" id='navbar' >
-       
+          <Nav.Link as={Link} to='/admin'>Home</Nav.Link>
           <div whileHover={{y:-5,scale : 1.3}}>
        
           <Dropdowns name= {"Add_staff"} />
